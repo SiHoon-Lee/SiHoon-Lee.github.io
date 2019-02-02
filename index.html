@@ -217,7 +217,7 @@
 			<article class="map stage">
 				<h1 class="title">map</h1>
 				
-				<div id="daumRoughmapContainer1548602942125"></div>
+				<div id="daumRoughmapContainer1548602942125" class="root_daum_roughmap root_daum_roughmap_landing"></div>
 				
 				<div class="js-scroll-wrap">
 					<div class="info1">
@@ -285,15 +285,13 @@
 	})
 </script>
 
-<script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=50987a0145d5458f547f7ab367ca27b2"></script>
+<script charset="UTF-8" class="daum_roughmap_loader_script" src="http://dmaps.daum.net/map_js_init/roughmapLoader.js"></script>
 <script charset="UTF-8">
-	var container = document.getElementById('daumRoughmapContainer1548602942125');
-	var options = { 
-		center: new daum.maps.LatLng(33.450701, 126.570667),
-		level: 3
-	};
-
-	var map = new daum.maps.Map(container, options);
+	new daum.roughmap.Lander({
+		"timestamp" : "1548602942125",
+		"key" : "ryjd",
+		"mapHeight" : "280"
+	}).render();
 </script>
 </body>
 </html>
