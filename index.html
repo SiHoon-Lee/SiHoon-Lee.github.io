@@ -217,7 +217,7 @@
 			<article class="map stage">
 				<h1 class="title">map</h1>
 				
-				<div id="daumRoughmapContainer1548602942125" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+				<div id="daumRoughmapContainer1548602942125"></div>
 				
 				<div class="js-scroll-wrap">
 					<div class="info1">
@@ -284,14 +284,25 @@
 		$("html, body").animate({scrollTop:0}, 500, 'swing');
 	})
 </script>
-
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=50987a0145d5458f547f7ab367ca27b2"></script>
+<script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=50987a0145d5458f547f7ab367ca27b2"></script>
 <script charset="UTF-8">
-	new daum.roughmap.Lander({
-		"timestamp" : "1548602942125",
-		"key" : "ryjd",
-		"mapHeight" : "280"
-	}).render();
+	var container = document.getElementById('daumRoughmapContainer1548602942125');
+	var options = {
+		level: 3
+	};
+
+	var map = new daum.maps.Map(container, options);
+
+	var places = new daum.maps.services.Places();
+	places.setMap(map);
+	var callback = function(result, status) {
+    	if (status === daum.maps.services.Status.OK) {
+        	console.log(result);
+    	}
+	};
+
+	places.keywordSearch('영등포 위더스', callback);
+
 </script>
 </body>
 </html>
