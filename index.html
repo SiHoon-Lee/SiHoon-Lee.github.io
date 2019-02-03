@@ -298,14 +298,14 @@
 	    {
 	        title: '웨딩그룹위더스', 
 	        latlng: new daum.maps.LatLng(37.52135740425032, 126.90458851963542),
-	        html: '<div style="padding:0 5px;background:#fff;border-radius: 20px;padding-left: 10px;padding-right: 10px;border: 1px solid #2c3a51;padding-top:2px;padding-bottom:2px;font-size:14px;"> 영등포 위더스 </div>',
+	        html: '<div id="address_03" style="padding:0 5px;background:#fff;border-radius: 20px;padding-left: 10px;padding-right: 10px;border: 1px solid #2c3a51;padding-top:2px;padding-bottom:2px;font-size:14px;"> 영등포 위더스 </div>',
 	        xAnchor: 1.15,
 			yAnchor: 1.8
 	    },
 	    {
-	        title: '추가주차장 - 영남P', 
+	        title: '부속주차장 - 영남P', 
 	        latlng: new daum.maps.LatLng(37.51947087239316, 126.90258645384074),
-	        html: '<div style="padding:0 5px;background:#fff;border-radius: 20px;padding-left: 10px;padding-right: 10px;border: 1px solid #2c3a51;padding-top:2px;padding-bottom:2px;font-size:14px;"> 추가주차장 - 영남P </div>',
+	        html: '<div id="address_04" style="padding:0 5px;background:#fff;border-radius: 20px;padding-left: 10px;padding-right: 10px;border: 1px solid #2c3a51;padding-top:2px;padding-bottom:2px;font-size:14px;"> 부속주차장 - 영남P </div>',
 	        xAnchor: -0.15,
 			yAnchor: 1.8
 	    }
@@ -341,9 +341,14 @@
 	  document.body.removeChild(t);
 	}
 
-	$('#address_01,#address_02').click(function() {
+	$('#address_01,#address_02,#address_03').click(function() {
 	  copyToClipboard('영등포구 영등포동6가 7번지 웨딩그룹 위더스 영등포');
-	  alert('주소가 복사되였습니다.');
+	  alert('위더스 주소가 복사 되였습니다.');
+	});
+
+	$('#address_04').click(function() {
+	  copyToClipboard('서울특별시 영등포구 영등포동4가 영남공영 주차장');
+	  alert('영남P 주소가 복사 되였습니다.');
 	});
 
 </script>
