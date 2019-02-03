@@ -224,8 +224,8 @@
 						<strong class="js-event1 js-event">위더스 영등포</strong>
 						<span class="js-event2 js-event">아모르홀</span>
 					</div>
-					<i class="icon icon-map js-event3 js-event"></i>
-					<div class="info2 js-event4 js-event">
+					<i id="address_01" class="icon icon-map js-event3 js-event"></i>
+					<div id="address_02" class="info2 js-event4 js-event">
 						<p class="address"><strong>영등포구 영등포동6가 7번지<br>웨딩그룹 위더스 영등포 9층</strong><span>(서울 영등포구 영중로 55 웨딩그룹 위더스 영등포)</span></p>
 						<a href="tel:02-3477-5000"><strong class="phone">02-6418-3000</strong></a>
 					</div>
@@ -331,6 +331,20 @@
 		});
 
 	}
+
+	function copyToClipboard(val) {
+	  var t = document.createElement("textarea");
+	  document.body.appendChild(t);
+	  t.value = val;
+	  t.select();
+	  document.execCommand('copy');
+	  document.body.removeChild(t);
+	}
+
+	$('#address_01,#address_02').click(function() {
+	  copyToClipboard('영등포구 영등포동6가 7번지 웨딩그룹 위더스 영등포');
+	  alert('주소가 복사되였습니다.');
+	});
 
 </script>
 </body>
