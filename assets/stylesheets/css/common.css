@@ -849,14 +849,53 @@ body {
   margin-top: 7px;
 }
 
-.stage.wedding-info .user-info .info {
+.stage.wedding-info .user-info div {
   display: inline-block;
-  margin-left: 11px;
+  margin-right: 5px;
+  vertical-align: top;
+}
+
+.stage.wedding-info .user-info em {
+  font-weight: 500;
+  line-height: 18px;
+  display: block;
+  vertical-align: top;
+}
+
+.stage.wedding-info .user-info .info {
+  display: block;
   font-size: 14px;
+  margin-top: 10px;
 }
 
 .stage.wedding-info .user-info .info:first-child {
-  margin-left: 0;
+  margin-top: 20px;
+}
+
+.stage.wedding-info .user-info .info:first-child em {
+  line-height: 18px;
+}
+
+.stage.wedding-info .user-info .info:first-child span {
+  line-height: 18px;
+}
+
+.stage.wedding-info .user-info .info:first-child strong {
+  line-height: 18px;
+}
+
+.stage.wedding-info .user-info span {
+  display: inline-block;
+  line-height: 36px;
+  vertical-align: top;
+}
+
+.stage.wedding-info .user-info strong {
+  display: inline-block;
+  line-height: 36px;
+  width: 40px;
+  text-align: right;
+  vertical-align: top;
 }
 
 .stage.wedding-info .user-info .icon-heart {
